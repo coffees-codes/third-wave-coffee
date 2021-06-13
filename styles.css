@@ -63,7 +63,7 @@ header ul li a:hover{
   background: rgba(255, 255, 255, 0);
   color: #2b170c;
   display: none;
-  align-items: flex-end;
+  align-items: center;
 }
 .navbtn{
   color: #76533E;
