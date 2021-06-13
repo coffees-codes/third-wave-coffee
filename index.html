@@ -17,11 +17,14 @@
             <header>
                 <a href="#" class="logo"><img src="coffeelogo.png" width="50%" height="50%"></a>
                 <nav class="navbar" id="navbar">
-                  <ul id="menuList">
-                    <li><a href="#main">Home</a></li>
-                    <li><a href="#products">Products</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact"><button class="navbtn">Contact</button></a></li>
+                  <ul class="menuList">
+                    <li><a href="javascript:void(0);" class="closeicon" style= "color: white;text-decoration: none;" onclick="togglemenu()">
+                      <i class="fa fa-times"></i>
+                    </a></li>
+                    <li><a href="#main" onclick="togglemenu()">Home</a></li>
+                    <li><a href="#products" onclick="togglemenu()">Products</a></li>
+                    <li><a href="#about" onclick="togglemenu()">About</a></li>
+                    <li><a href="#contact" onclick="togglemenu()"><button class="navbtn">Contact</button></a></li>
                   </ul>
                   <a href="javascript:void(0);" class="icon" onclick="togglemenu()">
                     <i class="fa fa-bars"></i>
@@ -93,6 +96,19 @@
             var header = document.querySelector("header");
             header.classList.toggle("sticky", window.scrollY>0);
           })
+          function togglemenu(){
+          var x = document.getElementById("navbar");
+          if (x.className === "navbar") {
+            x.className += " responsive";
+          } else {
+            x.className = "navbar";
+          }}
+          var w = $(document).width();
+          function hider(){
+            if(w <=800){
+              x.className -= " responsive";
+            }
+          }
 
         </script>
             
